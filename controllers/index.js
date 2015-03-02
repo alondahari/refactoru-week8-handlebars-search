@@ -5,7 +5,7 @@ var indexController = {
 		res.render('search', data);
 	},
 	searchWord: function(req, res){
-		res.send(data.programming[req.body.formData] || data['search engines'][req.body.formData])
+		res.send(data.programming[req.body.formData].desc || data['search engines'][req.body.formData].desc)
 	}
 };
 

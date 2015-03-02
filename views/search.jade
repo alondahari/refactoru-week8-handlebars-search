@@ -5,9 +5,7 @@ block content
 		input#searchValue(name="searchValue", placeholder="Search for a proggramming language")
 		input(type="submit", value="Search")
 
-	#results
+	p#results
 
 script#results-template(type="text/x-handlebars-template")
-	ul
-		li {{title}}
-			p {{description}}
+	p {{desc}}
