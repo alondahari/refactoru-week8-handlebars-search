@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	form#search-form(action='/search', method='POST')
+		input#searchValue(name="searchValue", placeholder="Search for a proggramming language")
+		input(type="submit", value="Search")
+
+	#results
+
+script#results-template(type="text/x-handlebars-template")
+	ul
+		li {{title}}
+			p {{description}}

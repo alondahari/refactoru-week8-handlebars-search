@@ -1,6 +1,11 @@
+var data = require('../models/data.js')
+
 var indexController = {
-	index: function(req, res) {
-		res.render('index');
+	search: function(req, res) {
+		res.render('search', data);
+	},
+	searchWord: function(req, res){
+		res.send(data.programming[req.body.formData] || data['search engines'][req.body.formData])
 	}
 };
 
